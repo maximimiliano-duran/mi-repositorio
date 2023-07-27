@@ -1,3 +1,4 @@
+/* Estilos generales */
 body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
@@ -6,7 +7,7 @@ body {
 }
 
 header {
-    background-color: #333;
+    background-color: #1da1f2;
     color: #fff;
     text-align: center;
     padding: 1rem;
@@ -16,43 +17,64 @@ header h1 {
     font-size: 2rem;
 }
 
-section {
-    padding: 1rem;
+.menu {
+    background-color: #1da1f2;
+    padding: 0.5rem;
+    text-align: center;
 }
 
-.skills ul {
-    list-style-type: square;
+.menu ul {
+    list-style: none;
+    padding: 0;
+}
+
+.menu li {
+    display: inline-block;
+    margin-right: 1rem;
+}
+
+.menu a {
+    color: #fff;
+    text-decoration: none;
+    padding: 0.5rem;
+    border-radius: 5px;
+}
+
+.menu a:hover {
+    background-color: #0c8de6;
 }
 
 footer {
-    background-color: #333;
+    background-color: #1da1f2;
     color: #fff;
     text-align: center;
     padding: 1rem;
 }
 
-footer h3 {
+/* Estilo específico para la página de proyectos */
+.projects {
+    background-color: #fff;
+    padding: 1rem;
+}
+
+.projects h2 {
     font-size: 1.5rem;
+    margin-bottom: 1rem;
 }
 
-.contact-buttons {
-    display: flex;
-    justify-content: center;
-    gap: 10px;
+.projects p {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
 }
 
-.button {
-    display: inline-block;
-    padding: 10px 20px;
-    background-color: #007bff;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    text-decoration: none;
-    cursor: pointer;
-    transition: background-color 0.3s;
+.projects h3 {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
 }
 
-.button:hover {
-    background-color: #0056b3;
+.projects ul {
+    list-style-type: square;
+    margin-left: 1rem;
 }
+
+/* Agregar otros estilos específicos para las demás páginas si es necesario */
