@@ -5,14 +5,46 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pet Shop</title>
     <link href="assets/css/style.css" rel="stylesheet" type="text/css">
+    <title>Ingresa tu dirección</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <title>Ingresa tu dirección</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+      /* Estilos para el pop-up */
+      .popup {
+        display: none;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: #fff;
+        padding: 20px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+      }
+      .overlay {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+      }
+    </style>
+
   </head>
   <body>
     <header>
-      <div class="menu logo-nav">
-        <a href="index.html" class="logo">PETSHOP</a>
+       <div class="menu logo-nav">
+
+
+        <a href="index.html" class="logo">CARPART</a>
         <label class="menu-icon"><span class="fas fa-bars icomin"></span></label>
         <nav class="navigation">
+          <label for="direccion">Ingresa tu dirección:</label>
+          <li class="fas fa-map-marker-alt" onclick="openPopup()"></li>
           <ul>
+
             <li><a href="nosotros.html">Nosotros</a></li>
             <li><a href="productos.html">Productos</a></li>
             <li><a href="contacto.html">Contacto</a></li>
@@ -28,10 +60,54 @@
               </svg></a>
             </li>
           </ul>
+
         </nav>
       </div>
+      <div>
+    
+      </div>
+
     </header>
 
+  <!-- Pop-up para seleccionar dirección -->
+  <div class="overlay" id="overlay"></div>
+  <div class="popup" id="popup">
+    <label for="region">Región:</label>
+    <select id="region">
+      <!-- Agregar las regiones de Chile aquí -->
+    </select>
+    
+    <label for="comuna">Comuna:</label>
+    <input type="text" id="comuna">
+    
+    <label for="calle">Calle:</label>
+    <input type="text" id="calle">
+    
+    <button onclick="saveAddress()">OK</button>
+  </div>
+
+  <script>
+    function openPopup() {
+      document.getElementById('overlay').style.display = 'block';
+      document.getElementById('popup').style.display = 'block';
+    }
+    
+    function saveAddress() {
+      var region = document.getElementById('region').value;
+      var comuna = document.getElementById('comuna').value;
+      var calle = document.getElementById('calle').value;
+      
+      var direccionTexto = document.getElementById('direccionTexto');
+      direccionTexto.textContent = `${comuna}, ${region}, ${calle}`;
+      
+      closePopup();
+    }
+    
+    function closePopup() {
+      document.getElementById('overlay').style.display = 'none';
+      document.getElementById('popup').style.display = 'none';
+    }
+  </script>
 <div class="slider">
   <ul>
     <li><img src="assets\img\slide1.jpg" alt="..."></li>
