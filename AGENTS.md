@@ -17,8 +17,27 @@
 - Realiza cambios pequeños y verificables. Distingue código escrito, compilación y comportamiento comprobado en el Editor.
 - Registra aquí las decisiones confirmadas y mantén el historial en Git.
 
-## Estado inicial
+## Decisiones confirmadas para la muestra
 
-- No hay decisiones visuales ni de plataforma confirmadas.
-- No hay proyecto Unity creado ni paquetes descargados.
-- Unity 6000.6.8f1 está instalado en el equipo de desarrollo; confirma compatibilidad antes de fijar paquetes o recursos.
+- Nombre técnico del proyecto: `PrototipoElemental`. El nombre comercial del juego sigue pendiente.
+- Presentación: juego 3D con cámara cenital y dirección artística ilustrada en 2D.
+- Plataforma inicial: Windows PC. Monetización aún no definida.
+- Editor: Unity 6.3 LTS, versión `6000.3.28f1`.
+- Pipeline: Universal Render Pipeline, plantilla oficial `com.unity.template.urp-blank`.
+- Alcance: una sala, personaje controlable, ataque y habilidad de un elemento, esquive, un enemigo, vida y daño, derrota, recompensa con elección y reinicio.
+
+## Pendiente de decisión
+
+- Nombre comercial, identidad artística final y recursos definitivos.
+- Elemento del protagonista, elementos disponibles, combinaciones, habilidades, recursos, recargas y estados.
+- Qué se conserva después de morir. No implementes progresión permanente hasta acordarlo.
+- Duración de las partidas y plataforma final además de Windows PC.
+
+## Estado técnico
+
+- El proyecto Unity está en `PrototipoElemental/` dentro de esta raíz Git.
+- La plantilla aporta URP, Input System, uGUI/TextMeshPro y AI Navigation. El manifiesto resuelto tiene AI Navigation `2.0.16`.
+- Cinemachine `3.1.7` está instalado para el encuadre y seguimiento de cámara.
+- `com.unity.pipeline` `0.10.0-exp.1` está instalado por el flujo de creación del Unity CLI para automatización local del Editor; es un paquete experimental y debe tratarse como herramienta de desarrollo.
+- La escena actual es todavía la escena inicial de la plantilla. No hay combate implementado ni assets externos integrados.
+- El Editor 6.3 está instalado y la licencia Unity Personal está activa. La primera apertura espera que Maximiliano revise y acepte «Unity Editor Software Terms» en la ventana del Editor.
